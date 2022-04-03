@@ -1,0 +1,33 @@
+body{
+    background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.container{
+    /* background-color: red; */
+    width: 15em;
+    height: 20rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+.button{
+    width: fit-content;
+    text-align: center;
+    margin-top: 4%;
+}
+
+#image{
+    width: 8rem;
+    height: 8rem;
+    /* margin: 5% 20%; */
+}
+
+#city{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: large;
+    margin-top: 2rem;
+}
