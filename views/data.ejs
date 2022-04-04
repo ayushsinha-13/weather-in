@@ -13,7 +13,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -29,6 +29,25 @@
         <source src="<%= currentSend %>" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
+    
+    <div class="header">
+        <p class="condition"><%= currentCondition.weather[0].main %></p>
+        <p class="city"><%= city %></p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col head">Temperature</div>
+            <div class="col head">Feels Like</div>
+            <div class="col head">Humidity</div>
+            <div class="col head">Pressure</div>
+        </div>
+        <div class="row">
+            <div class="col content"><%= currentCondition.main.temp %>°C</div>
+            <div class="col content"><%= currentCondition.main.feels_like %>°C</div>
+            <div class="col content"><%= currentCondition.main.humidity %>%</div>
+            <div class="col content"><%= pressure %>atm</div>
+        </div>
+    </div>
 
 </body>
 </html>
