@@ -1,9 +1,8 @@
 body{
-    background-image: url("https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.pexels.com/photos/210307/pexels-photo-210307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
-    height: 100%;
 }
 
 .container{
@@ -23,7 +22,8 @@ body{
     bottom: 0%;
     width: 100%;
     text-align: center;
-    color: chartreuse;
+    font-weight: 500;
+    color: black;
 }
 
 #image{

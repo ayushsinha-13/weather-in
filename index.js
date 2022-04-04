@@ -17,7 +17,7 @@ app.post('/', (req,res)=>{
     const city = req.body.city
     const apiKey = "5732d3d6d0f8dfb10a34ba542cb5caae"
     const unit = "metric"
-    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&unit=" + unit
+    const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=" + unit
 
     https.get(url, (result)=>{
         console.log(result.statusCode)
@@ -26,6 +26,8 @@ app.post('/', (req,res)=>{
             const weather = JSON.parse(data);
             const condition = weather.weather[0].main
             let current = ""
+            let pressure = weather.main.pressure * 0.0009869233
+            pressure = pressure.toFixed(2)
             console.log(condition)
             if(condition === "Clear"){
                 current = "https://static.videezy.com/system/resources/previews/000/045/991/original/stockfootage0086.mp4"
@@ -39,7 +41,7 @@ app.post('/', (req,res)=>{
                 current = "https://static.videezy.com/system/resources/previews/000/032/857/original/grasswind3.mp4"
             }
 
-            res.render("data", {currentSend: current})
+            res.render("data", {city: city,currentSend: current,currentCondition: weather,pressure: pressure})
         })
     })
 })
